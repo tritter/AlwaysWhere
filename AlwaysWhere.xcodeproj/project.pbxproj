@@ -13,6 +13,12 @@
 		CD1211212B34684400CAC4C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD12111F2B34684400CAC4C2 /* Main.storyboard */; };
 		CD1211232B34684500CAC4C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1211222B34684500CAC4C2 /* Assets.xcassets */; };
 		CD1211262B34684500CAC4C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1211242B34684500CAC4C2 /* LaunchScreen.storyboard */; };
+		CD12112F2B34687B00CAC4C2 /* TomTomSDKBindingFrameworkHTTPInternal in Frameworks */ = {isa = PBXBuildFile; productRef = CD12112E2B34687B00CAC4C2 /* TomTomSDKBindingFrameworkHTTPInternal */; };
+		CD1211312B34687B00CAC4C2 /* TomTomSDKBindingFrameworkLoggingInternal in Frameworks */ = {isa = PBXBuildFile; productRef = CD1211302B34687B00CAC4C2 /* TomTomSDKBindingFrameworkLoggingInternal */; };
+		CD1211332B34687B00CAC4C2 /* TomTomSDKBindingMapDisplayEngineInternal in Frameworks */ = {isa = PBXBuildFile; productRef = CD1211322B34687B00CAC4C2 /* TomTomSDKBindingMapDisplayEngineInternal */; };
+		CD1211352B34687B00CAC4C2 /* TomTomSDKBindingTrafficTileGeneratorInternal in Frameworks */ = {isa = PBXBuildFile; productRef = CD1211342B34687B00CAC4C2 /* TomTomSDKBindingTrafficTileGeneratorInternal */; };
+		CD1211372B34687B00CAC4C2 /* TomTomSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CD1211362B34687B00CAC4C2 /* TomTomSDKCommon */; };
+		CD12113A2B3468F200CAC4C2 /* TomTomSDKMapDisplay in Frameworks */ = {isa = PBXBuildFile; productRef = CD1211392B3468F200CAC4C2 /* TomTomSDKMapDisplay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1211372B34687B00CAC4C2 /* TomTomSDKCommon in Frameworks */,
+				CD1211332B34687B00CAC4C2 /* TomTomSDKBindingMapDisplayEngineInternal in Frameworks */,
+				CD12112F2B34687B00CAC4C2 /* TomTomSDKBindingFrameworkHTTPInternal in Frameworks */,
+				CD1211352B34687B00CAC4C2 /* TomTomSDKBindingTrafficTileGeneratorInternal in Frameworks */,
+				CD1211312B34687B00CAC4C2 /* TomTomSDKBindingFrameworkLoggingInternal in Frameworks */,
+				CD12113A2B3468F200CAC4C2 /* TomTomSDKMapDisplay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +54,7 @@
 			children = (
 				CD1211182B34684400CAC4C2 /* AlwaysWhere */,
 				CD1211172B34684400CAC4C2 /* Products */,
+				CD1211382B3468F200CAC4C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +80,13 @@
 			path = AlwaysWhere;
 			sourceTree = "<group>";
 		};
+		CD1211382B3468F200CAC4C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +103,14 @@
 			dependencies = (
 			);
 			name = AlwaysWhere;
+			packageProductDependencies = (
+				CD12112E2B34687B00CAC4C2 /* TomTomSDKBindingFrameworkHTTPInternal */,
+				CD1211302B34687B00CAC4C2 /* TomTomSDKBindingFrameworkLoggingInternal */,
+				CD1211322B34687B00CAC4C2 /* TomTomSDKBindingMapDisplayEngineInternal */,
+				CD1211342B34687B00CAC4C2 /* TomTomSDKBindingTrafficTileGeneratorInternal */,
+				CD1211362B34687B00CAC4C2 /* TomTomSDKCommon */,
+				CD1211392B3468F200CAC4C2 /* TomTomSDKMapDisplay */,
+			);
 			productName = AlwaysWhere;
 			productReference = CD1211162B34684400CAC4C2 /* AlwaysWhere.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +139,9 @@
 				Base,
 			);
 			mainGroup = CD12110D2B34684400CAC4C2;
+			packageReferences = (
+				CD12112D2B34687B00CAC4C2 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */,
+			);
 			productRefGroup = CD1211172B34684400CAC4C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,6 +394,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD12112D2B34687B00CAC4C2 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tomtom-international/tomtom-sdk-spm-core";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.36.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD12112E2B34687B00CAC4C2 /* TomTomSDKBindingFrameworkHTTPInternal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD12112D2B34687B00CAC4C2 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
+			productName = TomTomSDKBindingFrameworkHTTPInternal;
+		};
+		CD1211302B34687B00CAC4C2 /* TomTomSDKBindingFrameworkLoggingInternal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD12112D2B34687B00CAC4C2 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
+			productName = TomTomSDKBindingFrameworkLoggingInternal;
+		};
+		CD1211322B34687B00CAC4C2 /* TomTomSDKBindingMapDisplayEngineInternal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD12112D2B34687B00CAC4C2 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
+			productName = TomTomSDKBindingMapDisplayEngineInternal;
+		};
+		CD1211342B34687B00CAC4C2 /* TomTomSDKBindingTrafficTileGeneratorInternal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD12112D2B34687B00CAC4C2 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
+			productName = TomTomSDKBindingTrafficTileGeneratorInternal;
+		};
+		CD1211362B34687B00CAC4C2 /* TomTomSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD12112D2B34687B00CAC4C2 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
+			productName = TomTomSDKCommon;
+		};
+		CD1211392B3468F200CAC4C2 /* TomTomSDKMapDisplay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD12112D2B34687B00CAC4C2 /* XCRemoteSwiftPackageReference "tomtom-sdk-spm-core" */;
+			productName = TomTomSDKMapDisplay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD12110E2B34684400CAC4C2 /* Project object */;
 }
